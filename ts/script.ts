@@ -4,7 +4,12 @@
 -in grado di stampare saldo attuale della madre;
 -calcolo dell'interesse 10% nel conto della madre;
 */
-
+let input = document.querySelector('input') as HTMLInputElement
+let inputValue = Number(input.value.trim())
+let accountSelect = document.querySelector('select') as HTMLSelectElement
+let selectValue = accountSelect.value
+let deposittBtn = document.getElementById('depositBtn')
+let withdrawBtn = document.getElementById('withdrawBtn')
 
 class BasicUser {
     name: string;
@@ -56,6 +61,9 @@ class InterestUser extends BasicUser {
 }
 let SonAccount = new BasicUser('Son','ciao')
 let MotherAccount = new InterestUser('Mother','ciao')
+
+
+
 
 
 console.log('*******init******')
